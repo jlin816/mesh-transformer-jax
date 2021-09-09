@@ -1,0 +1,43 @@
+{
+  "layers": 28,
+  "d_model": 4096,
+  "n_heads": 16,
+  "n_vocab": 50400,
+  "norm": "layernorm",
+  "pe": "rotary",
+  "pe_rotary_dims": 64,
+
+  "seq": 2048,
+  "cores_per_replica": 8,
+  "per_replica_batch": 1,
+  "gradient_accumulation_steps": 32,
+
+  "warmup_steps": 1000,
+  "anneal_steps": 557000,
+  "lr": 1e-5,
+  "end_lr": 1e-6,
+  "weight_decay": 0.1,
+  "total_steps": 560000,
+
+  "tpu_size": 8,
+
+  "bucket": "codex-dialog",
+  "model_dir": "owt_lrs1e-5_lre1e-6",
+
+  "train_set": "owt.train.index",
+  "val_set": {
+    "code_clippy": "owt.val.index"
+  },
+
+  "eval_harness_tasks": [
+  ],
+
+  "val_batches": 100,
+  "val_every": 300,
+  "ckpt_every": 500,
+  "keep_every": 10000,
+
+  "name": "owt_lrs1e-5_lre1e-6",
+  "wandb_project": "code-clippy-py",
+  "comment": ""
+}
