@@ -12,17 +12,17 @@
   "per_replica_batch": 1,
   "gradient_accumulation_steps": 32,
 
-  "warmup_steps": 3000,
-  "anneal_steps": 557000,
-  "lr": 1e-4,
+  "warmup_steps": 1000,
+  "anneal_steps": 99000,
+  "lr": 5e-5,
   "end_lr": 1e-5,
   "weight_decay": 0.1,
-  "total_steps": 560000,
+  "total_steps": 100000,
 
   "tpu_size": 8,
 
   "bucket": "codex-dialog",
-  "model_dir": "code-clippy-py_lrs1e-4_lre1e-5",
+  "model_dir": "ccpy2_lrs5e-5_lre1e-5",
 
   "train_set": "code_clippy_py.train.index",
   "val_set": {
@@ -32,12 +32,12 @@
   "eval_harness_tasks": [
   ],
 
-  "val_batches": 100,
-  "val_every": 500,
+  "val_batches": 10000,
+  "val_every": 300,
   "ckpt_every": 500,
   "keep_every": 10000,
 
-  "name": "code-clippy-py_lrs1e-4_lre1e-5",
+  "name": "ccpy2_lrs5e-5_lre1e-5",
   "wandb_project": "code-clippy-py",
   "comment": ""
 }
